@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fun with 2D Arrays", "Fun with 2D Arrays\Fun with 2D Arrays.csproj", "{A8D09D16-055F-4FE7-AD85-E62EADC30300}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8D09D16-055F-4FE7-AD85-E62EADC30300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8D09D16-055F-4FE7-AD85-E62EADC30300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8D09D16-055F-4FE7-AD85-E62EADC30300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8D09D16-055F-4FE7-AD85-E62EADC30300}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D974A14-D71B-4034-8FFE-27723E65C29C}
+	EndGlobalSection
+EndGlobal
