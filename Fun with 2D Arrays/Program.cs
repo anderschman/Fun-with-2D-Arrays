@@ -16,7 +16,7 @@
             int columns = int.Parse(Console.ReadLine());
 
             //Create 2D Array (with numbers)
-            string[,] Array2D = new string[rows, columns];
+            int[,] Array2D = new int[rows, columns];
 
             //Fill chessboard pattern alternately with LETTERS
             for (int i = 0; i < rows; i++)
@@ -25,11 +25,11 @@
                 {
                     if ((i + j) % 2 == 0)
                     {
-                        Array2D[i, j] = "X";
+                        Array2D[i, j] = 1;
                     }
                     else
                     {
-                        Array2D[i, j] = "O";
+                        Array2D[i, j] = 0;
                     }
                 }
             }
