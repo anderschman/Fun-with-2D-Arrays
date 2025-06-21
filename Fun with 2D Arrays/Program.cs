@@ -18,14 +18,15 @@
             //Create 2D Array (with numbers)
             int[,] Array2D = new int[rows, columns];
 
-            //Fill chessboard pattern alternately with LETTERS
+            //Fill grid
+            Random rand = new Random();
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
                     if ((i + j) % 2 == 0)
                     {
-                        Array2D[i, j] = 1;
+                        Array2D[i, j] = rand.Next(0, 100); // Fill with random numbers between 0 and 99
                     }
                     else
                     {
@@ -44,7 +45,7 @@
                 }
                 if (i < rows - 1)
                 {
-                    Console.WriteLine("\n" + new string('-', (columns * 2) + 1)); // Print separator line
+                    Console.WriteLine("\n" + new string('-', (columns * 2) + 5)); // Print separator line
                 }
             }
         }
