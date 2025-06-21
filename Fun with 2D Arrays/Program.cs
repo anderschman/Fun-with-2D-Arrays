@@ -44,7 +44,7 @@
                 }
                 if (i < rows - 1)
                 {
-                    Console.WriteLine("\n" + new string('-', (columns * 2) + 1));
+                    Console.WriteLine("\n" + new string('-', (columns * 2) + 1)); // Print separator line
                 }
             }
         }
