@@ -16,7 +16,7 @@
             int columns = int.Parse(Console.ReadLine());
 
             //Create 2D Array (with numbers)
-            int[,] Array2D = new int[rows, columns];
+            char[,] Array2D = new char[rows, columns];
 
             //Fill grid
             Random rand = new Random();
@@ -24,7 +24,7 @@
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Array2D[i, j] = rand.Next(1, 10); // Random numbers between 1 and 9
+                    Array2D[i, j] = rand.Next(2) == 0 ? '#' : ' '; // Änderung des Füllcodes zu '#' und ' '
                 }
             }
             // Edit grid
