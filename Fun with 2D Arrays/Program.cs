@@ -24,7 +24,7 @@
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Array2D[i, j] = rand.Next(2) == 0 ? '#' : ' '; // Änderung des Füllcodes zu '#' und ' '
+                    Array2D[i, j] = rand.Next(2) == 0 ? '#' : ' '; // change fillcode to '#' and ' '
                 }
             }
             // Edit grid
