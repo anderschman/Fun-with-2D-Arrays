@@ -33,7 +33,7 @@
                 Console.Write("|");
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.Write(Array2D[i, j] + "|");
+                    Console.Write($"[{i},{j}]|");//showing inices ow rows and columns
                 }
                 Console.WriteLine(); // Move to the next line after printing a row
             }
