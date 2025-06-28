@@ -24,7 +24,7 @@
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    Array2D[i, j] = rand.Next(2) == 0 ? '#' : ' '; // change fillcode to '#' and ' '
+                    Array2D[i, j] = (i + j) % 2 == 0 ? '#' : ' '; // modulo-operator for occupancy number (even, odd)
                 }
             }
             // Edit grid
