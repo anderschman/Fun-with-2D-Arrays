@@ -36,10 +36,7 @@
                 {
                     Console.Write(Array2D[i, j] + "|");
                 }
-                if (i < rows - 1)
-                {
-                    Console.WriteLine("\n" + new string('-', (columns * 2) + 1)); // Print separator line
-                }
+                Console.WriteLine(); // Move to the next line after printing a row
             }
         }
     }
