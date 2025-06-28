@@ -33,9 +33,17 @@
                 Console.Write("|");
                 for (int j = 0; j < columns; j++)
                 {
-                    Console.Write($"[{i},{j}]|");//showing inices ow rows and columns
+
+                    if (i == 0 || i == rows - 1 || j == 0 || j == columns - 1)
+                    {
+                        Console.Write("*|"); // Print border pattern
+                    }
+                    else
+                    {
+                        Console.Write("#|"); // print center pattern
+                    }
                 }
-                Console.WriteLine(); // Move to the next line after printing a row
+                Console.WriteLine();
             }
         }
     }
