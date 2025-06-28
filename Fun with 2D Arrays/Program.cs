@@ -24,14 +24,7 @@
             {
                 for (int j = 0; j < columns; j++)
                 {
-                    if ((i + j) % 2 == 0)
-                    {
-                        Array2D[i, j] = rand.Next(0, 100); // Fill with random numbers between 0 and 99
-                    }
-                    else
-                    {
-                        Array2D[i, j] = 0;
-                    }
+                    Array2D[i, j] = rand.Next(1, 10); // Random numbers between 1 and 9
                 }
             }
             // Edit grid
@@ -45,7 +38,7 @@
                 }
                 if (i < rows - 1)
                 {
-                    Console.WriteLine("\n" + new string('-', (columns * 2) + 5)); // Print separator line
+                    Console.WriteLine("\n" + new string('-', (columns * 2) + 1)); // Print separator line
                 }
             }
         }
