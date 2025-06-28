@@ -19,7 +19,6 @@
             char[,] Array2D = new char[rows, columns];
 
             //Fill grid
-            Random rand = new Random();
             for (int i = 0; i < rows; i++)
             {
                 for (int j = 0; j < columns; j++)
