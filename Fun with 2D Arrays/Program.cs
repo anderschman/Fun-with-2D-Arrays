@@ -1,47 +1,114 @@
-﻿namespace Fun_with_2D_Arrays
+﻿using System;
+
+namespace Simple_2D_Grid
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            //Fun with 2D Arrays
-            Console.WriteLine("Fun with 2D Arrays");
+            Console.WriteLine("Fun with 2D Arrays!");
 
-            //User enters number of lines
-            Console.WriteLine("How many rows shall the grid have?");
+            Console.WriteLine("Choose an option:");
+            Console.WriteLine("1 - Grid with border markings");
+            Console.WriteLine("2 - Grid with random numbers (0–9)");
+            Console.WriteLine("3 - Grid with '#' randomly or ' ' centrally filled");
+            Console.WriteLine("4 - Grid with indices of rows & columns");
+
+            string option = Console.ReadLine();
+
+            Console.Write("How many rows shall the grid have? ");
             int rows = int.Parse(Console.ReadLine());
 
-            //User enters number of columns
-            Console.WriteLine("How many columns shall the grid have?");
+            Console.Write("How many columns shall the grid have? ");
             int columns = int.Parse(Console.ReadLine());
 
-            //Create 2D Array (with numbers)
-            char[,] Array2D = new char[rows, columns];
+            char[,] grid = new char[rows, columns];
+            Random rand = new Random();
 
-            //Fill grid
-            for (int i = 0; i < rows; i++)
+            // Option 1 (border markings)
+            if (option == "1")
             {
-                for (int j = 0; j < columns; j++)
+                for (int i = 0; i < rows; i++)
                 {
-                    Array2D[i, j] = (i + j) % 4 == 0 ? '#' : ' '; // modulo-operator for occupancy number (even, odd, odd, odd)
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if (i == 0 || i == rows - 1 || j == 0 || j == columns - 1)
+                        {
+                            grid[i, j] = '*';
+                        }
+                        else
+                        {
+                            grid[i, j] = '#';
+                        }
+                    }
                 }
             }
-            // Option 1: Grid with boarder markings
+
+            // Option 2 (random numbers)
+            if (option == "2")
+            {
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        int num = rand.Next(0, 10);
+                        grid[i, j] = (char)('0' + num);
+                    }
+                }
+            }
+
+            // Option 3 (Random: # or ' ')
+            if (option == "3")
+            {
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        grid[i, j] = rand.Next(2) == 0 ? '#' : ' ';
+                    }
+                }
+            }
+
+            // Option 4 (only indices output, grid itself empty)
+            if (option == "4")
+            {
+                // Grid mit Leerzeichen füllen (optional, da nicht genutzt)
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        grid[i, j] = ' ';
+                    }
+                }
+
+                Console.WriteLine("\nGrid pattern with indices:");
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        Console.Write($"[{i},{j}] ");
+                    }
+                    Console.WriteLine();
+                }
+
+                return; // end of program
+            }
+
+            // eliminate wrong selection
+            if (option != "1" && option != "2" && option != "3" && option != "4")
+            {
+                Console.WriteLine("Invalid option selected. Program will exit.");
+                return;
+            }
+
+            // Ausgabe des Grids für Optionen 1–3
             Console.WriteLine("\nGrid pattern:");
             for (int i = 0; i < rows; i++)
             {
                 Console.Write("|");
                 for (int j = 0; j < columns; j++)
                 {
-
-                    if (i == 0 || i == rows - 1 || j == 0 || j == columns - 1)
-                    {
-                        Console.Write("*|"); // Print border pattern
-                    }
-                    else
-                    {
-                        Console.Write("#|"); // print center pattern
-                    }
+                    Console.Write($"{grid[i, j]}|");
                 }
                 Console.WriteLine();
             }
