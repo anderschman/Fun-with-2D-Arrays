@@ -26,7 +26,7 @@
                     Array2D[i, j] = (i + j) % 4 == 0 ? '#' : ' '; // modulo-operator for occupancy number (even, odd, odd, odd)
                 }
             }
-            // Edit grid
+            // Option 1: Grid with boarder markings
             Console.WriteLine("\nGrid pattern:");
             for (int i = 0; i < rows; i++)
             {
