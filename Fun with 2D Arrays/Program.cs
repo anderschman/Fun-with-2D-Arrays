@@ -16,11 +16,15 @@ namespace Simple_2D_Grid
 
             string option = Console.ReadLine();
 
+            // Ask user for number of rows (make out integer out of the text..)
             Console.Write("How many rows shall the grid have? ");
-            int rows = int.Parse(Console.ReadLine());
+            string row = Console.ReadLine();           // Read input as text (e.g. "5")
+            int rows = int.Parse(row);                 // Convert the text to a number
 
+            // Ask user for number of columns
             Console.Write("How many columns shall the grid have? ");
-            int columns = int.Parse(Console.ReadLine());
+            string column = Console.ReadLine();        // Read input as text (e.g. "8")
+            int columns = int.Parse(column);           // Convert the text to a number
 
             char[,] grid = new char[rows, columns];
             Random rand = new Random();
@@ -69,10 +73,9 @@ namespace Simple_2D_Grid
                 }
             }
 
-            // Option 4 (only indices output, grid itself empty)
+            // Option 4 (indicating rows and coluns)
             if (option == "4")
-            {
-                // Grid mit Leerzeichen füllen (optional, da nicht genutzt)
+            {                
                 for (int i = 0; i < rows; i++)
                 {
                     for (int j = 0; j < columns; j++)
@@ -94,14 +97,14 @@ namespace Simple_2D_Grid
                 return; // end of program
             }
 
-            // eliminate wrong selection
+            // Eliminate wrong selection
             if (option != "1" && option != "2" && option != "3" && option != "4")
             {
                 Console.WriteLine("Invalid option selected. Program will exit.");
                 return;
             }
 
-            // Ausgabe des Grids für Optionen 1–3
+            // Output of the grid for options 1–3
             Console.WriteLine("\nGrid pattern:");
             for (int i = 0; i < rows; i++)
             {
