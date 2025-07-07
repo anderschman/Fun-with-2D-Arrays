@@ -5,20 +5,20 @@ namespace Simple_2D_Grid
     internal class Program
     {
         // Nur diese Konstanten bleiben zur Vermeidung von Magic Strings
-        const string OptionBorder = "1";
-        const string OptionRandomDigits = "2";
-        const string OptionRandomFill = "3";
-        const string OptionIndices = "4";
+        const string OPTION_BOARDER = "1";
+        const string OPTION_RANDOM_NUMBERS = "2";
+        const string OPTION_RANDOM_FILL = "3";
+        const string OPTION_INDICES = "4";
 
         static void Main(string[] args)
         {
             Console.WriteLine("Fun with 2D Arrays!");
 
             Console.WriteLine("Choose an option:");
-            Console.WriteLine($"{OptionBorder} - Grid with border markings");
-            Console.WriteLine($"{OptionRandomDigits} - Grid with random numbers (0–9)");
-            Console.WriteLine($"{OptionRandomFill} - Grid with '#' randomly or ' ' centrally filled");
-            Console.WriteLine($"{OptionIndices} - Grid with indices of rows & columns");
+            Console.WriteLine($"{OPTION_BOARDER} - Grid with border markings");
+            Console.WriteLine($"{OPTION_RANDOM_NUMBERS} - Grid with random numbers (0–9)");
+            Console.WriteLine($"{OPTION_RANDOM_FILL} - Grid with '#' randomly or ' ' centrally filled");
+            Console.WriteLine($"{OPTION_INDICES} - Grid with indices of rows & columns");
 
             string option = Console.ReadLine();
 
@@ -36,7 +36,7 @@ namespace Simple_2D_Grid
             Random rand = new Random();
 
             // Option 1 (border markings)
-            if (option == OptionBorder)
+            if (option == OPTION_BOARDER)
             {
                 for (int i = 0; i < rows; i++)
                 {
@@ -54,7 +54,7 @@ namespace Simple_2D_Grid
                 }
             }
             // Option 2 (random numbers)
-            else if (option == OptionRandomDigits)
+            else if (option == OPTION_RANDOM_NUMBERS)
             {
                 for (int i = 0; i < rows; i++)
                 {
@@ -66,7 +66,7 @@ namespace Simple_2D_Grid
                 }
             }
             // Option 3 (Random: # or ' ')
-            else if (option == OptionRandomFill)
+            else if (option == OPTION_RANDOM_FILL)
             {
                 for (int i = 0; i < rows; i++)
                 {
@@ -77,7 +77,7 @@ namespace Simple_2D_Grid
                 }
             }
             // Option 4 (indicating rows and columns)
-            else if (option == OptionIndices)
+            else if (option == OPTION_INDICES)
             {
                 for (int i = 0; i < rows; i++)
                 {
